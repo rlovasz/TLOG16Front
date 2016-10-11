@@ -10,6 +10,7 @@ and open the template in the editor.
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="listTasks.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
@@ -19,46 +20,61 @@ and open the template in the editor.
 					<div class="navbar-header">
 						<a class="navbar-brand" href="index.html">TimeLogger</a>
 					</div>
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="index.html">Home</a></li>
-					</ul>
 				</div>
 			</nav></div>
+		<div class="row col-sm-12 col-xs-12 col-md-12 col-lg-12" id="statistics">
+			<h4>Extra minutes:</h4>
+			<h4>Sum of minutes:</h4>
+			<h4>Required minutes today:</h4>		
+		</div>
+		<h3>List of tasks</h3><br>
 		<div class="table-responsive">
 			<table class="table">
 				<thead>
 					<tr>
-						<th>Task id</th>
-						<th>Comment</th>
-						<th>Start time</th>
-						<th>End time</th>
-						<th>Length of task in minutes</th>
+						<th id="taskId">Task id</th>
+						<th id="comment">Comment</th>
+						<th id="startTime">Start time</th>
+						<th id="endTime">End time</th>
+						<th id="minPerTask">Length of task in minutes</th>
+						<th id="edit">Edit</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td>4865</td>
+						<td>This is a comment</td>
+						<td>07:30</td>
+						<td>08:45</td>
+						<td>75</td>
+						<td>
+							<span id="glyphicons">
+								<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-pencil"></span></button>
+								<a href="#" class="glyphicon glyphicon-remove"></a>
+							</span>
+						</td>
 					</tr>
 				</tbody>
 			</table>
+		</div>
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Set required working hours</h4>
+					</div>
+					<div class="modal-body">
+						<input type="text" name="taskId" value="default">
+						<input type="text" name="comment" value="default">
+						<input type="text" name="startTime" value="default">
+						<input type="text" name="endTime" value="default">
+					</div>
+					<div class="modal-footer">
+						<button type="Submit" data-dismiss="modal">OK</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

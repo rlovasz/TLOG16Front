@@ -10,6 +10,7 @@ and open the template in the editor.
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="index.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
@@ -19,33 +20,239 @@ and open the template in the editor.
 					<div class="navbar-header">
 						<a class="navbar-brand" href="index.html">TimeLogger</a>
 					</div>
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="index.html">Home</a></li>
-						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Month
-								<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="newMonth.html">Add new month</a></li>
-								<li><a href="listMonths.html">List months</a></li>
-							</ul>
-						</li>
-						<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">Day<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="newDay.html">Add new day</a></li>
-								<li><a href="listDays.html">List days</a></li>
-							</ul>
-						</li>
-						<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">Task<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="startTask.html">Start new task</a></li>
-								<li><a href="listTasks.html">List tasks</a></li>
-								<li><a href="finishTask.html">Finish a started task</a></li> 
-								<li><a href="modifyTask.html">Modify existing task</a></li> 
-								<li><a href="deleteTask.html">Delete a task</a></li> 
-							</ul>
-						</li>
-					</ul>
 				</div>
 			</nav></div>
+		<div>
+			<div class="row col-sm-12 col-xs-12 col-md-12 col-lg-12">
+				<ul class="pager">
+					<li><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+					<li>YYYY-HH</li>
+					<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="container col-sm-12 col-xs-12 col-md-12 col-lg-12">
+			<div class="grid-calendar ">
+				<div class="row calendar-week-header">
+					<div id="dayName" class="col-xs-1 grid-cell"><p>Mon</p></div>
+					<div id="dayName" class="col-xs-1 grid-cell"><p>Tue</p></div>
+					<div id="dayName" class="col-xs-1 grid-cell"><p>Wed</p></div>
+					<div id="dayName" class="col-xs-1 grid-cell"><p>Thu</p></div>
+					<div id="dayName" class="col-xs-1 grid-cell"><p>Fri</p></div>
+					<div id="dayName" class="col-xs-1 grid-cell"><p>Sat</p></div>
+					<div id="dayName" class="col-xs-1 grid-cell"><p>Sun</p></div>
+				</div>
+
+				<div class="row calendar-week" >
+					<div id="day" class="col-xs-1 grid-cell">
+						<p>1</p>
+						<h5>Extra minutes: </h5><br>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+				</div>
+
+				<div class="row calendar-week" >
+					<div id="day" class="col-xs-1 grid-cell">
+						<p>8</p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+				</div>
+
+
+				<div class="row calendar-week" >
+					<div id="day" class="col-xs-1 grid-cell">
+						<p>15</p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+				</div>
+
+
+				<div class="row calendar-week" >
+					<div id="day" class="col-xs-1 grid-cell">
+						<p>22</p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+				</div>
+
+				<div class="row calendar-week" >
+					<div id="day" class="col-xs-1 grid-cell">
+						<p>29</p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+					<div id="day" class="col-xs-1 grid-cell">
+						<p></p>
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button><br><br>
+						<a href="listTasks.html"><span class="glyphicon glyphicon-pencil"></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Set required working hours</h4>
+					</div>
+					<div class="modal-body">
+						<label>Set hours:</label><br>
+						<input type="text" name="requiredMinPerDay"><br>
+					</div>
+					<div class="modal-footer">
+						<button type="Submit" data-dismiss="modal">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
