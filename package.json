@@ -1,8 +1,17 @@
 {
-	"name": "HTML5Application",
-	"version": "1.0.0",
-	"keywords": ["util", "functional", "server", "client", "browser"],
-	"author": "precognox",
-	"contributors": [],
-	"dependencies": {}
+  "name": "HTML5Application",
+  "version": "1.0.0",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "precognox",
+  "contributors": [],
+  "dependencies": {
+    "datejs": "^1.0.0-rc3",
+    "jquery": "^3.1.1"
+  }
 }
